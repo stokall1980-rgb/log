@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Utama</title>
+</head>
+<body>
+  <script>
+    // Cek apakah sudah login
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <h1>Selamat datang!</h1>
+  <p>Kamu berhasil login.</p>
+
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
